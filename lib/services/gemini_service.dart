@@ -8,6 +8,9 @@ class GeminiService {
   static final String _apiKey = dotenv.env['GEMINI_API_KEY'] ?? '';
   static late final GenerativeModel _model;
 
+  static final GenerationConfig generationConfig =
+      GenerationConfig(responseMimeType: 'application/json');
+
   static void initialize() {
     if (_apiKey.isEmpty) {
       throw Exception('GEMINI_API_KEY not found in environment variables');
@@ -147,9 +150,6 @@ Example format:
         ])
       ];
 
-      final generationConfig =
-          GenerationConfig(responseMimeType: 'application/json'); //added
-
       final response = await _model.generateContent(content,
           generationConfig: generationConfig); //added
       final text = response.text;
@@ -177,8 +177,7 @@ Example format:
           DataPart('application/pdf', bytes),
         ])
       ];
-      final generationConfig =
-          GenerationConfig(responseMimeType: 'application/json'); //added
+
       final response = await _model.generateContent(content,
           generationConfig: generationConfig); //added
       final text = response.text;
