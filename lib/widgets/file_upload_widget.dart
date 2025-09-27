@@ -27,7 +27,6 @@ class FileUploadWidget extends StatelessWidget {
       if (result != null && result.files.single.path != null) {
         final file = File(result.files.single.path!);
         onFileSelected(file);
-        }
       }
     } catch (e) {
       // Handle error - could show a snackbar or dialog
@@ -49,7 +48,7 @@ class FileUploadWidget extends StatelessWidget {
             padding: const EdgeInsets.all(24),
             decoration: BoxDecoration(
               border: Border.all(
-                color: colorScheme.outline.withOpacity(0.5),
+                color: colorScheme.outline.withValues(alpha: 0.5),
                 width: 2,
                 style: BorderStyle.solid,
               ),
@@ -62,14 +61,14 @@ class FileUploadWidget extends StatelessWidget {
                 Icon(
                   Icons.cloud_upload_outlined,
                   size: 40,
-                  color: colorScheme.onSurface.withOpacity(0.6),
+                  color: colorScheme.onSurface.withValues(alpha: 0.6),
                 ),
                 const SizedBox(height: 12),
                 Text(
                   label,
                   style: theme.textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.w600,
-                    color: colorScheme.onSurface.withOpacity(0.8),
+                    color: colorScheme.onSurface.withValues(alpha: 0.8),
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -77,7 +76,7 @@ class FileUploadWidget extends StatelessWidget {
                 Text(
                   'Click to browse or drag & drop',
                   style: theme.textTheme.bodySmall?.copyWith(
-                    color: colorScheme.onSurface.withOpacity(0.6),
+                    color: colorScheme.onSurface.withValues(alpha: 0.6),
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -119,3 +118,4 @@ class FileUploadWidget extends StatelessWidget {
       ],
     );
   }
+}
