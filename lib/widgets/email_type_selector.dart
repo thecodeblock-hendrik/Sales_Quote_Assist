@@ -68,7 +68,7 @@ class EmailTypeSelector extends StatelessWidget {
           side: isSelected
               ? BorderSide.none
               : BorderSide(
-                  color: colorScheme.outline.withValues(alpha: (0.3)),
+                  color: colorScheme.outline.withValues(alpha: 0.3),
                 ),
         ),
         elevation: isSelected ? 2 : 0,

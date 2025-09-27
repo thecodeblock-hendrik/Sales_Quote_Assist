@@ -247,7 +247,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Row(
               children: [
                 Container(
-                  width: 32,
+                  width: 24,
                   height: 32,
                   decoration: BoxDecoration(
                     color: const Color(0xFF6366F1),
