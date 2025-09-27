@@ -8,7 +8,7 @@ A Flutter application for sales teams to automatically generate quote quantities
 - 📧 **Email Generation**: Create professional client emails from final quote PDFs
 - 🎨 **Multiple Email Tones**: Choose from Standard Professional, Warm & Client Focused, or Clear & Action Oriented
 - 🌙 **Dark Mode Support**: Automatic light/dark theme switching
-- 💻 **Cross-Platform**: Runs on macOS, Windows, Linux, iOS, and Android
+- 💻 **Cross-Platform**: Runs on iOS, and Android
 
 ## Prerequisites
 
