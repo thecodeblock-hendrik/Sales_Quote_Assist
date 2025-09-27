@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:file_picker/file_picker.dart';
 import '../models/quote_item.dart';
 import '../services/gemini_service.dart';
 import '../widgets/file_upload_widget.dart';
@@ -153,7 +152,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Text(
                       'Automate your sales workflow with AI-powered document processing.',
                       style: theme.textTheme.titleMedium?.copyWith(
-                        color: colorScheme.onSurface.withOpacity(0.7),
+                        color: colorScheme.onSurface.withValues(alpha: 0.7),
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -277,7 +276,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Text(
               'Upload a site inspection document (Word or PDF) to automatically extract and sum up all line items.',
               style: theme.textTheme.bodyMedium?.copyWith(
-                color: colorScheme.onSurface.withOpacity(0.7),
+                color: colorScheme.onSurface.withValues(alpha: 0.7),
               ),
             ),
             const SizedBox(height: 24),
@@ -335,8 +334,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 decoration: BoxDecoration(
                   color: colorScheme.surface,
                   borderRadius: BorderRadius.circular(8),
-                  border:
-                      Border.all(color: colorScheme.outline.withOpacity(0.2)),
+                  border: Border.all(
+                      color: colorScheme.outline.withValues(alpha: 0.2)),
                 ),
                 child: SingleChildScrollView(
                   child: DataTable(
@@ -421,7 +420,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Text(
               'Upload the completed quote (PDF) to generate a professional email template to send to your client.',
               style: theme.textTheme.bodyMedium?.copyWith(
-                color: colorScheme.onSurface.withOpacity(0.7),
+                color: colorScheme.onSurface.withValues(alpha: 0.7),
               ),
             ),
             const SizedBox(height: 24),
@@ -527,8 +526,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 decoration: BoxDecoration(
                   color: colorScheme.surface,
                   borderRadius: BorderRadius.circular(8),
-                  border:
-                      Border.all(color: colorScheme.outline.withOpacity(0.2)),
+                  border: Border.all(
+                      color: colorScheme.outline.withValues(alpha: 0.2)),
                 ),
                 child: SingleChildScrollView(
                   padding: const EdgeInsets.all(16),
