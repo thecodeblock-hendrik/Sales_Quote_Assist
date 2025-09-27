@@ -147,7 +147,11 @@ Example format:
         ])
       ];
 
-      final response = await _model.generateContent(content);
+      final generationConfig =
+          GenerationConfig(responseMimeType: 'application/json'); //added
+
+      final response = await _model.generateContent(content,
+          generationConfig: generationConfig); //added
       final text = response.text;
 
       if (text == null) {
@@ -173,8 +177,10 @@ Example format:
           DataPart('application/pdf', bytes),
         ])
       ];
-
-      final response = await _model.generateContent(content);
+      final generationConfig =
+          GenerationConfig(responseMimeType: 'application/json'); //added
+      final response = await _model.generateContent(content,
+          generationConfig: generationConfig); //added
       final text = response.text;
 
       if (text == null) {
